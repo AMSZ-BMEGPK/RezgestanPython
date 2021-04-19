@@ -9,10 +9,10 @@
 
 
 <style type="text/css">
-    pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
@@ -14313,7 +14313,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.-Feladat:">1. Feladat:<a class="anchor-link" href="#1.-Feladat:">&#182;</a></h2><p>Kis elmozdulások esetén a lineáris mozgásegyenlet mátrixegyütthatós alakja a következő egyenlettel adható meg</p>
+<h2 id="1.-Feladat:">1. Feladat:<a class="anchor-link" href="#1.-Feladat:">&#182;</a></h2><p>Kis elmozdulások esetén a lineáris mozgásegyenlet mátrix együtthatós alakja a következő egyenlettel adható meg:</p>
 $$\mathbf{M}\mathbf{\ddot{q}}+\mathbf{C\dot{q}}+\mathbf{Kq} = \mathbf{Q^*},$$<p>ahol $\mathbf{q}$ az általános koordináták vektora, $\mathbf{M}$ a tömegmátrix, $\mathbf{C}$ a csillapítási mátrix, $\mathbf{K}$ a merevségi mátrix, $\mathbf{Q^*}$ pedig az általános erők vektora.</p>
 
 </div>
@@ -14434,9 +14434,9 @@ $\displaystyle U = \frac{k_{1} \left(- \operatorname{x_{1}}{\left(t \right)} + \
 <span class="n">DoF</span> <span class="o">=</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">]</span>
 
 <span class="c1">## Tömegmátrix (kinetikus energiából)</span>
-<span class="c1"># nulla mátrix létrehozása a tömegmátrixnak</span>
+<span class="c1"># nullmátrix létrehozása a tömegmátrixnak</span>
 <span class="n">M</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="c1"># nullamátrix feltöltése a megfelelő parciális derivált értékekkel</span>
+<span class="c1"># nullmátrix feltöltése a megfelelő parciális derivált értékekkel</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">diff</span><span class="p">((</span><span class="n">DoF</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="o">.</span><span class="n">diff</span><span class="p">((</span><span class="n">DoF</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -14444,9 +14444,9 @@ $\displaystyle U = \frac{k_{1} \left(- \operatorname{x_{1}}{\left(t \right)} + \
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;M = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">M</span><span class="p">))))</span>
 
 <span class="c1">## Merevségi mátrix (potenciális energiából)</span>
-<span class="c1"># nulla mátrix létrehozása a merevségi mátrixnak</span>
+<span class="c1"># nullmátrix létrehozása a merevségi mátrixnak</span>
 <span class="n">K</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="c1"># nullamátrix feltöltése a megfelelő parciális derivált értékekkel</span>
+<span class="c1"># nullmátrix feltöltése a megfelelő parciális derivált értékekkel</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="n">K</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">DoF</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">DoF</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
@@ -14502,20 +14502,21 @@ $\displaystyle K = \left[\begin{matrix}k_{1} &amp; - k_{1} &amp; 0\\- k_{1} &amp
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Így a mozgásegyenlet
-$$\mathbf{M}\mathbf{\ddot{q}}+\mathbf{Kq} = \mathbf{0},$$</p>
+$$\mathbf{M}\mathbf{\ddot{q}}+\mathbf{Kq} = \mathbf{0}.$$</p>
 <h2 id="2.-Feladat">2. Feladat<a class="anchor-link" href="#2.-Feladat">&#182;</a></h2><p>A mozgásegyenlet egy homogén lineáris közönséges differenciál egyenlet, melynek megoldásást exponenciális próbafüggvénnyel keressük</p>
 $$
 \mathbf{q}(t) = \mathbf{A}e^{i\omega_nt},
-$$<p>ahol $\mathbf{A}$ a lengésképvektor. Visszahelyettesítve a próbafüggvényt és annak deriváltját a mozgásegyenletbe adódik</p>
+$$<p>ahol $\mathbf{A}$ a lengésképvektor. Visszahelyettesítve a próbafüggvényt és annak deriváltját a mozgásegyenletbe,</p>
 $$
 (-\omega_n^2\mathbf{M}+\mathbf{K})\mathbf{A}e^{i\omega_nt} = \mathbf{0}
-$$<p>A fenti egyenletnek csak akkor van nem triviális megoldása, ha a következő teljesül</p>
+$$<p>adódik.
+A fenti egyenletnek csak akkor van nem triviális megoldása, ha a következő teljesül:</p>
 $$
 \det(-\omega_n^2\mathbf{M}+\mathbf{K}) = 0.
-$$<p>Ez az úgyenvezett frekvencia egyenlet, amiből a rendszer sajátkörfrekvenciái kaphatók. A lengéskép vektorokat úgy lehet megkapni, hogy a frekvencia egyenlet megolásait beírjuk az alábbi egyenletbe</p>
+$$<p>Ez az úgyenvezett frekvencia egyenlet, amiből a rendszer sajátkörfrekvenciái kaphatók. A lengéskép vektorokat úgy lehet megkapni, hogy a frekvencia egyenlet megolásait beírjuk az alábbi egyenletbe:</p>
 $$
 (-\omega_{ni}^2\mathbf{M}+\mathbf{K})\mathbf{A}_{i} = 0.
-$$<p>Mivel ennek az egyenletnek végtelen megoldása van ezért az $\mathbf{A}_{i}$ lengésképvektor egyik koordinátáját, szokás szerint az elsőt tetszőlegesen 1-nek választhatjuk.</p>
+$$<p>Mivel ennek az egyenletnek végtelen megoldása van, ezért az $\mathbf{A}_{i}$ lengésképvektor egyik koordinátáját, szokás szerint az elsőt tetszőlegesen 1-nek választhatjuk.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14531,11 +14532,9 @@ $$<p>Mivel ennek az egyenletnek végtelen megoldása van ezért az $\mathbf{A}_{
 <span class="n">ω_n</span> <span class="o">=</span> <span class="p">[(</span><span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ω_n2_val</span><span class="p">]</span>
 
 
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{n,1}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_n</span><span class="p">[</span><span class="mi">0</span><span class="p">]))))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{n,2}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_n</span><span class="p">[</span><span class="mi">1</span><span class="p">]))))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{n,3}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_n</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">5</span><span class="p">)))))</span>
-
-<span class="c1"># [rad/s]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{n,1}} = </span><span class="si">{}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\\</span><span class="s1">text{{rad/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_n</span><span class="p">[</span><span class="mi">0</span><span class="p">]))))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{n,2}} = </span><span class="si">{}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\\</span><span class="s1">text{{rad/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_n</span><span class="p">[</span><span class="mi">1</span><span class="p">]))))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{n,3}} = </span><span class="si">{}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\\</span><span class="s1">text{{rad/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_n</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">5</span><span class="p">)))))</span>
 </pre></div>
 
      </div>
@@ -14557,7 +14556,7 @@ $$<p>Mivel ennek az egyenletnek végtelen megoldása van ezért az $\mathbf{A}_{
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle ω_{n,1} = 0$
+$\displaystyle ω_{n,1} = 0\ \text{rad/s}$
 </div>
 
 </div>
@@ -14571,7 +14570,7 @@ $\displaystyle ω_{n,1} = 0$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle ω_{n,2} = 10$
+$\displaystyle ω_{n,2} = 10\ \text{rad/s}$
 </div>
 
 </div>
@@ -14585,7 +14584,7 @@ $\displaystyle ω_{n,2} = 10$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle ω_{n,3} = 16.583$
+$\displaystyle ω_{n,3} = 16.583\ \text{rad/s}$
 </div>
 
 </div>
@@ -14609,15 +14608,13 @@ $\displaystyle ω_{n,3} = 16.583$
     
     <span class="c1"># oldjuk meg az egyenletet a lengésképekre és írjuk be a megoldásokat a lengésképvektorba (2. és 3. koordináta)</span>
     <span class="sd">&quot;&quot;&quot;A solver most a két ismeretlen változóra számított megoldást egy dictionary-be rendezi,</span>
-<span class="sd">    melyben az egyese elemekre a hozzá rendelt névvel, jelen esetben a szimbólumok neveivel (A2, A3) lehet hivatkozni.&quot;&quot;&quot;</span>
+<span class="sd">    melyben az egyes elemekre a hozzá rendelt névvel, jelen esetben a szimbólumok neveivel (A2, A3) lehet hivatkozni.&quot;&quot;&quot;</span>
     <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((((</span><span class="o">-</span><span class="n">ω_n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="o">+</span><span class="n">K</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)))[</span><span class="n">A2</span><span class="p">]</span> 
     <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((((</span><span class="o">-</span><span class="n">ω_n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="o">+</span><span class="n">K</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)))[</span><span class="n">A3</span><span class="p">]</span>
 
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;A_{{1}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]))))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;A_{{2}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">)))))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;A_{{3}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">)))))</span>
-
-<span class="c1"># [m]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;A_{{1}} = </span><span class="si">{}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\\</span><span class="s1">text{{m}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]))))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;A_{{2}} = </span><span class="si">{}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\\</span><span class="s1">text{{m}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">)))))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;A_{{3}} = </span><span class="si">{}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\\</span><span class="s1">text{{m}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">)))))</span>
 </pre></div>
 
      </div>
@@ -14639,7 +14636,7 @@ $\displaystyle ω_{n,3} = 16.583$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle A_{1} = \left[\begin{matrix}1\\1\\1\end{matrix}\right]$
+$\displaystyle A_{1} = \left[\begin{matrix}1\\1\\1\end{matrix}\right]\ \text{m}$
 </div>
 
 </div>
@@ -14653,7 +14650,7 @@ $\displaystyle A_{1} = \left[\begin{matrix}1\\1\\1\end{matrix}\right]$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle A_{2} = \left[\begin{matrix}1.0\\0\\-0.4\end{matrix}\right]$
+$\displaystyle A_{2} = \left[\begin{matrix}1.0\\0\\-0.4\end{matrix}\right]\ \text{m}$
 </div>
 
 </div>
@@ -14667,7 +14664,7 @@ $\displaystyle A_{2} = \left[\begin{matrix}1.0\\0\\-0.4\end{matrix}\right]$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle A_{3} = \left[\begin{matrix}1.0\\-1.75\\1.0\end{matrix}\right]$
+$\displaystyle A_{3} = \left[\begin{matrix}1.0\\-1.75\\1.0\end{matrix}\right]\ \text{m}$
 </div>
 
 </div>
@@ -14682,7 +14679,7 @@ $\displaystyle A_{3} = \left[\begin{matrix}1.0\\-1.75\\1.0\end{matrix}\right]$
 <p>Készítette:</p>
 
 <pre><code>   Juhos-Kiss Álmos (Alkalmazott Mechanika Szakosztály) 
-   Bodor Bálint (BME MM) kidolgozása és ábrái alapján.
+   Bodor Bálint (BME MM) kidolgozása alapján.
 
     Hibák, javaslatok:
     amsz.bme@gmail.com

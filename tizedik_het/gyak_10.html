@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>gyak_1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>gyak_10</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14272,60 +14272,46 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1.-Gyakorlat---&#220;tk&#246;z&#233;sek">1. Gyakorlat - &#220;tk&#246;z&#233;sek<a class="anchor-link" href="#1.-Gyakorlat---&#220;tk&#246;z&#233;sek">&#182;</a></h1><p>2021.03.31</p>
+<h1 id="10.-Gyakorlat---2-DoF-nemline&#225;ris-rendszer">10. Gyakorlat - 2 DoF nemline&#225;ris rendszer<a class="anchor-link" href="#10.-Gyakorlat---2-DoF-nemline&#225;ris-rendszer">&#182;</a></h1><p>2021.04.16.</p>
 <h2 id="Feladat:">Feladat:<a class="anchor-link" href="#Feladat:">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center><img src="gyak1_1.png" width=500/></center>
+<center><img src="gyak10_1.png" width=400/></center>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A mellékelt ábrán egy 1 szabadságfokú rezgő rendszer látható, ami az $m_1$ tömegű golyóból és az $m_{\textrm{2}}$ tömegű rúdból áll. A rúd az A pontban található csuklópont körül el tud fordulni. A rendszer gravitációs erőtérben van, a nehézségi gyorsulás vektora függőlegesen lefelé mutat. A torziós rugó előfeszítése olyan, hogy a rúd egyensúlyi helyzete a vízszintes pozíció. A nyugalomban lévő rúd rezgését az $m_1$ tömegű golyóval való ütközés idézi elő. Az ütközés előtt a golyó $h$ magasságból szabadon esik nulla kezdeti sebesség mellett.</p>
-<h3 id="Adatok:">Adatok:<a class="anchor-link" href="#Adatok:">&#182;</a></h3><table>
-<thead><tr>
-<th style="text-align:left"></th>
-<th style="text-align:left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$m_1$ = 6 kg</td>
-<td style="text-align:left">$m_2$ = 6 kg</td>
-</tr>
-<tr>
-<td style="text-align:left">$a$ = 0,3 m</td>
-<td style="text-align:left">$\beta$ = 60 °</td>
-</tr>
-<tr>
-<td style="text-align:left">$h$ = 0,115 m</td>
-<td style="text-align:left">$e$ = 1</td>
-</tr>
-</tbody>
-</table>
+<p>A mellékelt ábrán egy két szabadságfokú mechanikai lengőrendszer látható, mely egy $m_1$ tömegű és $r$ sugarú  korongból áll, ami egy $R$ belső sugarú mozgó felületen gördül. Ez az $m_2$ tömeg a $k_1$, $k_2$ és $k_3$ rugómerevségű rugók által van alátámasztva. Ennek vízszintes irányú elmozdulását az $y$ általánosított koordináta írja le, valamint a gördülő korong pozíciójának leírására a $\varphi$ általános koordináta használatos. A gravitációs mezőben elhelyezett rendszer egyensúlyi állapota az $y = 0$ és a $\varphi = 0$ állapothoz tartozik. Itt egyedül a rúgókat terheli statikus deformáció.</p>
+<h3 id="Adatok:">Adatok:<a class="anchor-link" href="#Adatok:">&#182;</a></h3><p>Az $m_1$ és $m_2$ tömegek, az $r$ és $R$ sugarak, valamint a $k_1$, $k_2$, $k_3$ rugómerevségek ismertnek tekinthetőek.</p>
 <h3 id="R&#233;szfeladatok:">R&#233;szfeladatok:<a class="anchor-link" href="#R&#233;szfeladatok:">&#182;</a></h3><ol>
-<li>Határozza meg a golyó sebességét és a rúd szögsebességét az ütközés utáni pillanatban!</li>
+<li>Határozza meg a rendszer nemlineáris mozgásegyenleteit a másodfajú Lagrange-egyenlettel, továbbá linearizálja az $y = 0$ és $\varphi = 0$ egyensúlyi helyzet körüli kis kitérések mellett.</li>
+<li>Határozza meg a linearizált mozgásegyenleteket mátrix együtthatós alakban is.</li>
 </ol>
 <h2 id="Megold&#225;s:">Megold&#225;s:<a class="anchor-link" href="#Megold&#225;s:">&#182;</a></h2><h3 id="&#160;1.-Feladat">&#160;1. Feladat<a class="anchor-link" href="#&#160;1.-Feladat">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span> <span class="c1">#szükséges könyvtárak importálása</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+<span class="c1"># a két általános koordináta felvétele</span>
 
-<span class="n">sp</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span> <span class="c1">#szép kiiratás</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">φ</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;φ&#39;</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
 
-<span class="n">h</span><span class="p">,</span> <span class="n">m_1</span><span class="p">,</span> <span class="n">m_2</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">β</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;h, m_1, m_2, e, β, a, g&quot;</span><span class="p">)</span> <span class="c1">#használt szimbólumok definiálása</span>
+<span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">k1</span><span class="p">,</span> <span class="n">k2</span><span class="p">,</span> <span class="n">k3</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;m_1, m_2, r, R, k_1, k_2, k_3, g&#39;</span><span class="p">)</span>
+<span class="c1"># Tároljuk ezeket a `q` általánosított koord. vektorban</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">y</span><span class="p">],[</span><span class="n">φ</span><span class="p">]])</span> <span class="c1"># a második réteg szögletes zárójel nem kötelező itt</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;\mathbf{{q}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">q</span><span class="p">))))</span>
 
-<span class="c1"># Készítsünk behelyettesítési listát az adatok alapján, SI-ben</span>
-<span class="n">adatok</span> <span class="o">=</span> <span class="p">[(</span><span class="n">h</span><span class="p">,</span><span class="mf">0.115</span><span class="p">),</span> <span class="p">(</span><span class="n">m_1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="n">m_2</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">β</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mf">0.3</span><span class="p">),</span> <span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mf">9.81</span><span class="p">)]</span>
+<span class="c1"># Figyeljünk rá, hogy mostantól `y` `q[0]` lesz, `φ` pedig `q[1]`.</span>
 </pre></div>
 
      </div>
@@ -14333,12 +14319,34 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \mathbf{q} = \left[\begin{matrix}y{\left(t \right)}\\φ{\left(t \right)}\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A leejtett $m_1$ tömegű test sebességének meghatározása az ütközés pillanata előtt, a munkatétel szerint:</p>
-$$T_1 - T_0 = W_{01},$$<p>ahol $T_0$ a kezdeti kinetikus energia, $T_1$ pedig az ütközés pillanatában a kinetikus energia, $W_{01}$ a mechanikai munka, amit a gravitációs erőtér végez. Mivel az $m_1$ tömegű testet 0 kezdősebességgel ejtettük le: $T_0 = 0.$</p>
-$$\dfrac{1}{2} m_1 c_1^2 = m_1 g h \longrightarrow c_1 = \sqrt{2 g h}.$$
+<p>A kinetikus energia meghatározása:</p>
+$$T = \frac{1}{2}m_2\dot{y}^2 + \frac{1}{2}m_1v_{\mathrm{S}}^2 + \frac{1}{2}\Theta_{\mathrm{1Sz}}\omega_{\mathrm{1z}}^2$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14346,22 +14354,21 @@ $$\dfrac{1}{2} m_1 c_1^2 = m_1 g h \longrightarrow c_1 = \sqrt{2 g h}.$$
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>                               <span class="c1">#1</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_1 = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_1</span><span class="p">))))</span>    <span class="c1">#2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; A kinetikus energiát az általánosított koordinákkal kell felírni, </span>
+<span class="sd">így `v_S` és `ω_1z`-t azok segítségével kell kifejezni. </span>
+<span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">c_1_num</span> <span class="o">=</span> <span class="n">c_1</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                <span class="c1">#3 `.subs(adatok)`: behelyettesítés, `.evalf(2)`: kiértékelés 2 tizedesjegyre</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_1 = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1_num</span><span class="p">)))</span>  <span class="c1">#4</span>
-
-<span class="n">c_1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_1&quot;</span><span class="p">)</span>                            <span class="c1">#5</span>
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_1</span><span class="p">,</span><span class="n">c_1_num</span><span class="p">))</span>                       <span class="c1">#6</span>
-
-<span class="c1"># Megjegyzés:</span>
-<span class="c1"># Az első kódsorban található a szimbólikus számítás, a másodikban a szimbólikus megoldás kiiratása történik</span>
-<span class="c1"># A harmadik kódsorban a numerikus megoldás kiszámítása, a negyedikben a numerikus megoldás kiiratása történik</span>
-<span class="c1"># Az ötödik kódsorban definiálunk egy szimbólumot a kiszámolt értékhez, a hatodik kódsorban a szimbólumot,</span>
-<span class="c1"># és annak numerikus értékét hozzáadjuk a behelyettesítési listához, hogy a késöbbiekben tudjunk vele számolni.</span>
-
-<span class="c1"># Ezen túl minden cellában hasonló metódus szerint történik a számítás</span>
+<span class="c1"># egy kis LaTeX-es formázás: a vektort félkövérrel íratjuk ki (bold font)</span>
+<span class="c1"># valamint az index álló betű legyen (roman).</span>
+<span class="n">v_O</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;\mathbf</span><span class="si">{v}</span><span class="s1">_\mathrm</span><span class="si">{O}</span><span class="s1">&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Hasonló, mint az `sp.Symbol`, csak jelen esetben </span>
+                                                   <span class="c1"># 3x1-es mátrixként kezeli. Így összeadható</span>
+                                                   <span class="c1"># szimbolikusan egy megfelelő dimenziójú mátrixszal.</span>
+<span class="n">v_S</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;\mathbf</span><span class="si">{v}</span><span class="s1">_\mathrm</span><span class="si">{S}</span><span class="s1">&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r_OSx</span><span class="p">,</span><span class="n">r_OSy</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;\mathbf</span><span class="si">{r}</span><span class="s1">_{\mathrm</span><span class="si">{OS}</span><span class="s1">z},\mathbf</span><span class="si">{r}</span><span class="s1">_{\mathrm</span><span class="si">{OS}</span><span class="s1">y}&#39;</span><span class="p">)</span>
+<span class="n">r_OS</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">r_OSx</span><span class="p">],[</span><span class="n">r_OSy</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">v_OS_red</span> <span class="o">=</span> <span class="n">v_O</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)]])</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">r_OS</span><span class="p">)</span>
+<span class="n">eq_vos</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">v_S</span><span class="p">,</span><span class="n">v_OS_red</span><span class="p">)</span>
+<span class="n">eq_vos</span>
 </pre></div>
 
      </div>
@@ -14377,27 +14384,13 @@ $$\dfrac{1}{2} m_1 c_1^2 = m_1 g h \longrightarrow c_1 = \sqrt{2 g h}.$$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
 
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_1 = \sqrt{2} \sqrt{g h}$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_1 = 1.5\ \text{m/s}$
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \mathbf{v}_\mathrm{S} = \left[\begin{matrix}- \mathbf{r}_{\mathrm{OS}y} \frac{d}{d t} φ{\left(t \right)}\\\mathbf{r}_{\mathrm{OS}z} \frac{d}{d t} φ{\left(t \right)}\\0\end{matrix}\right] + \mathbf{v}_\mathrm{O}$
 </div>
 
 </div>
@@ -14406,36 +14399,26 @@ $\displaystyle c_1 = 1.5\ \text{m/s}$
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center><img src="gyak1_2.png" width=500/></center>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Az ütközés $m_1$ szempontjából centrikus ütközés, $m_2$ szempontjából álló tengely körül elforduló test ütközése, ezért meg kell keresni az ütközési talppontot, melyet a következőképpen tehetünk meg:</p>
-<ol>
-<li>Kijelöljük az ütközési normálist.</li>
-<li>"$A$" pontból (elforduló tengely) merőlegest állítunk $\textbf{n}$ ütközési normálisra</li>
-</ol>
-<p>Szükség van a talppont és az álló tengely közötti távolságra, amely:</p>
-$$l = \overline{AT} = a\ \textrm{cos}(\beta).$$
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">β</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;l = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">l</span><span class="p">))))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; Sajnos a mátrix szimbólumos út nem járható </span>
+<span class="sd">a jelenlegi `sympy` verzió mellett (1.7.1). </span>
+<span class="sd">Remélhetőleg a jövőben jobban ki lesz dolgozva </span>
+<span class="sd">ez a megközelítés is. Az egyik legfőbb hiányosságot</span>
+<span class="sd">az alábbi kódsor szemlélteti:</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq_vos</span><span class="p">,</span><span class="n">v_O</span><span class="p">)</span> <span class="c1"># Azaz egyszerűen fejezzük ki a `v_O` vektort.</span>
 
-<span class="n">l_num</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m-ben</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;l = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l_num</span><span class="p">)))</span>
-
-<span class="n">l</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;l&quot;</span><span class="p">)</span>
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">l</span><span class="p">,</span><span class="n">l_num</span><span class="p">))</span>
+<span class="sd">&quot;&quot;&quot; Látható, hogy hibát kapunk. A `sympy solve` </span>
+<span class="sd">metódusa nincs felkészítve a mátrix szimbólumokkal</span>
+<span class="sd">való számolásra. Ez is jól mutatja, hogy a `sympy` </span>
+<span class="sd">közel sem tökéletes modul, bár folyamatosan fejlesztik.</span>
+<span class="sd">Remélhetőleg egy jövőbeli verzióba belekerül ez a funkció is.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 
      </div>
@@ -14454,53 +14437,298 @@ $$l = \overline{AT} = a\ \textrm{cos}(\beta).$$
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-4fcdda7f1235&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> az alábbi kódsor szemlélteti<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> &#34;&#34;&#34;
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>sp<span class="ansi-blue-fg">.</span>solve<span class="ansi-blue-fg">(</span>eq_vos<span class="ansi-blue-fg">,</span>v_O<span class="ansi-blue-fg">)</span> <span class="ansi-red-fg"># Azaz egyszerűen fejezzük ki a `v_O` vektort.</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-intense-fg ansi-bold">      9</span> &#34;&#34;&#34; Látható, hogy hibát kapunk. A `sympy solve` 
 
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/solvers/solvers.py</span> in <span class="ansi-cyan-fg">solve</span><span class="ansi-blue-fg">(f, *symbols, **flags)</span>
+<span class="ansi-green-intense-fg ansi-bold">    992</span> 
+<span class="ansi-green-intense-fg ansi-bold">    993</span>     <span class="ansi-red-fg"># we can solve for non-symbol entities by replacing them with Dummy symbols</span>
+<span class="ansi-green-fg">--&gt; 994</span><span class="ansi-red-fg">     </span>f<span class="ansi-blue-fg">,</span> symbols<span class="ansi-blue-fg">,</span> swap_sym <span class="ansi-blue-fg">=</span> recast_to_symbols<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">,</span> symbols<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    995</span> 
+<span class="ansi-green-intense-fg ansi-bold">    996</span>     <span class="ansi-red-fg"># this is needed in the next two events</span>
 
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle l = a \cos{\left(β \right)}$
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/solvers/solvers.py</span> in <span class="ansi-cyan-fg">recast_to_symbols</span><span class="ansi-blue-fg">(eqs, symbols)</span>
+<span class="ansi-green-intense-fg ansi-bold">    103</span>         isubs <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;subs&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    104</span>         <span class="ansi-green-fg">if</span> isubs <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 105</span><span class="ansi-red-fg">             </span>new_f<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>isubs<span class="ansi-blue-fg">(</span>swap_sym<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    106</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    107</span>             new_f<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/basic.py</span> in <span class="ansi-cyan-fg">subs</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    946</span>             rv <span class="ansi-blue-fg">=</span> self
+<span class="ansi-green-intense-fg ansi-bold">    947</span>             <span class="ansi-green-fg">for</span> old<span class="ansi-blue-fg">,</span> new <span class="ansi-green-fg">in</span> sequence<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 948</span><span class="ansi-red-fg">                 </span>rv <span class="ansi-blue-fg">=</span> rv<span class="ansi-blue-fg">.</span>_subs<span class="ansi-blue-fg">(</span>old<span class="ansi-blue-fg">,</span> new<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    949</span>                 <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>rv<span class="ansi-blue-fg">,</span> Basic<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    950</span>                     <span class="ansi-green-fg">break</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/cache.py</span> in <span class="ansi-cyan-fg">wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     70</span>         <span class="ansi-green-fg">def</span> wrapper<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     71</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 72</span><span class="ansi-red-fg">                 </span>retval <span class="ansi-blue-fg">=</span> cfunc<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     73</span>             <span class="ansi-green-fg">except</span> TypeError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     74</span>                 retval <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/basic.py</span> in <span class="ansi-cyan-fg">_subs</span><span class="ansi-blue-fg">(self, old, new, **hints)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1060</span>         rv <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_eval_subs<span class="ansi-blue-fg">(</span>old<span class="ansi-blue-fg">,</span> new<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1061</span>         <span class="ansi-green-fg">if</span> rv <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1062</span><span class="ansi-red-fg">             </span>rv <span class="ansi-blue-fg">=</span> fallback<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> old<span class="ansi-blue-fg">,</span> new<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1063</span>         <span class="ansi-green-fg">return</span> rv
+<span class="ansi-green-intense-fg ansi-bold">   1064</span> 
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/basic.py</span> in <span class="ansi-cyan-fg">fallback</span><span class="ansi-blue-fg">(self, old, new)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1037</span>                     args<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> arg
+<span class="ansi-green-intense-fg ansi-bold">   1038</span>             <span class="ansi-green-fg">if</span> hit<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1039</span><span class="ansi-red-fg">                 </span>rv <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1040</span>                 hack2 <span class="ansi-blue-fg">=</span> hints<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;hack2&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1041</span>                 <span class="ansi-green-fg">if</span> hack2 <span class="ansi-green-fg">and</span> self<span class="ansi-blue-fg">.</span>is_Mul <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> rv<span class="ansi-blue-fg">.</span>is_Mul<span class="ansi-blue-fg">:</span>  <span class="ansi-red-fg"># 2-arg hack</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/cache.py</span> in <span class="ansi-cyan-fg">wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     70</span>         <span class="ansi-green-fg">def</span> wrapper<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     71</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 72</span><span class="ansi-red-fg">                 </span>retval <span class="ansi-blue-fg">=</span> cfunc<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     73</span>             <span class="ansi-green-fg">except</span> TypeError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     74</span>                 retval <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/operations.py</span> in <span class="ansi-cyan-fg">__new__</span><span class="ansi-blue-fg">(cls, evaluate, _sympify, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">     86</span>         is_commutative <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">not</span> nc_part
+<span class="ansi-green-intense-fg ansi-bold">     87</span>         obj <span class="ansi-blue-fg">=</span> cls<span class="ansi-blue-fg">.</span>_from_args<span class="ansi-blue-fg">(</span>c_part <span class="ansi-blue-fg">+</span> nc_part<span class="ansi-blue-fg">,</span> is_commutative<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 88</span><span class="ansi-red-fg">         </span>obj <span class="ansi-blue-fg">=</span> cls<span class="ansi-blue-fg">.</span>_exec_constructor_postprocessors<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     89</span> 
+<span class="ansi-green-intense-fg ansi-bold">     90</span>         <span class="ansi-green-fg">if</span> order_symbols <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/basic.py</span> in <span class="ansi-cyan-fg">_exec_constructor_postprocessors</span><span class="ansi-blue-fg">(cls, obj)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1806</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1807</span>         <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> postprocessors<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>clsname<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1808</span><span class="ansi-red-fg">             </span>obj <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1809</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1810</span>         <span class="ansi-green-fg">return</span> obj
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matexpr.py</span> in <span class="ansi-cyan-fg">_postprocessor</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">    632</span> 
+<span class="ansi-green-intense-fg ansi-bold">    633</span>         <span class="ansi-green-fg">if</span> mat_class <span class="ansi-blue-fg">==</span> MatAdd<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 634</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> mat_class<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>matrices<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>doit<span class="ansi-blue-fg">(</span>deep<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    635</span>         <span class="ansi-green-fg">return</span> mat_class<span class="ansi-blue-fg">(</span>cls<span class="ansi-blue-fg">.</span>_from_args<span class="ansi-blue-fg">(</span>nonmatrices<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>matrices<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>doit<span class="ansi-blue-fg">(</span>deep<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    636</span>     <span class="ansi-green-fg">return</span> _postprocessor
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matadd.py</span> in <span class="ansi-cyan-fg">doit</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     81</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     82</span>             args <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>args
+<span class="ansi-green-fg">---&gt; 83</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> canonicalize<span class="ansi-blue-fg">(</span>MatAdd<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     84</span> 
+<span class="ansi-green-intense-fg ansi-bold">     85</span>     <span class="ansi-green-fg">def</span> _eval_derivative_matrix_lines<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/core.py</span> in <span class="ansi-cyan-fg">exhaustive_rl</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span>     <span class="ansi-blue-fg">&#34;&#34;&#34; Apply a rule repeatedly until it has no effect &#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">def</span> exhaustive_rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 11</span><span class="ansi-red-fg">         </span>new<span class="ansi-blue-fg">,</span> old <span class="ansi-blue-fg">=</span> rule<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> expr
+<span class="ansi-green-intense-fg ansi-bold">     12</span>         <span class="ansi-green-fg">while</span> new <span class="ansi-blue-fg">!=</span> old<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span>             new<span class="ansi-blue-fg">,</span> old <span class="ansi-blue-fg">=</span> rule<span class="ansi-blue-fg">(</span>new<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> new
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/core.py</span> in <span class="ansi-cyan-fg">conditioned_rl</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">     31</span>     <span class="ansi-green-fg">def</span> conditioned_rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     32</span>         <span class="ansi-green-fg">if</span> cond<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 33</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> rule<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     35</span>             <span class="ansi-green-fg">return</span> expr
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/core.py</span> in <span class="ansi-cyan-fg">do_one_rl</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span>     <span class="ansi-green-fg">def</span> do_one_rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     84</span>         <span class="ansi-green-fg">for</span> rl <span class="ansi-green-fg">in</span> rules<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 85</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     86</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-blue-fg">!=</span> expr<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     87</span>                 <span class="ansi-green-fg">return</span> result
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/rl.py</span> in <span class="ansi-cyan-fg">conglomerate</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">     67</span>         groups <span class="ansi-blue-fg">=</span> sift<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">,</span> key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     68</span>         counts <span class="ansi-blue-fg">=</span> dict<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>k<span class="ansi-blue-fg">,</span> sum<span class="ansi-blue-fg">(</span>map<span class="ansi-blue-fg">(</span>count<span class="ansi-blue-fg">,</span> args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> args <span class="ansi-green-fg">in</span> groups<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 69</span><span class="ansi-red-fg">         </span>newargs <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>combine<span class="ansi-blue-fg">(</span>cnt<span class="ansi-blue-fg">,</span> mat<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> mat<span class="ansi-blue-fg">,</span> cnt <span class="ansi-green-fg">in</span> counts<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     70</span>         <span class="ansi-green-fg">if</span> set<span class="ansi-blue-fg">(</span>newargs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">!=</span> set<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     71</span>             <span class="ansi-green-fg">return</span> new<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>newargs<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/rl.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">     67</span>         groups <span class="ansi-blue-fg">=</span> sift<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">,</span> key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     68</span>         counts <span class="ansi-blue-fg">=</span> dict<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>k<span class="ansi-blue-fg">,</span> sum<span class="ansi-blue-fg">(</span>map<span class="ansi-blue-fg">(</span>count<span class="ansi-blue-fg">,</span> args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> args <span class="ansi-green-fg">in</span> groups<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 69</span><span class="ansi-red-fg">         </span>newargs <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>combine<span class="ansi-blue-fg">(</span>cnt<span class="ansi-blue-fg">,</span> mat<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> mat<span class="ansi-blue-fg">,</span> cnt <span class="ansi-green-fg">in</span> counts<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     70</span>         <span class="ansi-green-fg">if</span> set<span class="ansi-blue-fg">(</span>newargs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">!=</span> set<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     71</span>             <span class="ansi-green-fg">return</span> new<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>newargs<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matadd.py</span> in <span class="ansi-cyan-fg">combine</span><span class="ansi-blue-fg">(cnt, mat)</span>
+<span class="ansi-green-intense-fg ansi-bold">    104</span>         <span class="ansi-green-fg">return</span> mat
+<span class="ansi-green-intense-fg ansi-bold">    105</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 106</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> cnt <span class="ansi-blue-fg">*</span> mat
+<span class="ansi-green-intense-fg ansi-bold">    107</span> 
+<span class="ansi-green-intense-fg ansi-bold">    108</span> 
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/numbers.py</span> in <span class="ansi-cyan-fg">__mul__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2215</span>             <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> Rational<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2216</span>                 <span class="ansi-green-fg">return</span> Rational<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>p<span class="ansi-blue-fg">*</span>other<span class="ansi-blue-fg">.</span>p<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">.</span>q<span class="ansi-blue-fg">,</span> igcd<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>p<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">.</span>q<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2217</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> Rational<span class="ansi-blue-fg">.</span>__mul__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2218</span>         <span class="ansi-green-fg">return</span> Rational<span class="ansi-blue-fg">.</span>__mul__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2219</span> 
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/decorators.py</span> in <span class="ansi-cyan-fg">__sympifyit_wrapper</span><span class="ansi-blue-fg">(a, b)</span>
+<span class="ansi-green-intense-fg ansi-bold">     94</span>                 <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> hasattr<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;_op_priority&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     95</span>                     b <span class="ansi-blue-fg">=</span> sympify<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">,</span> strict<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 96</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>             <span class="ansi-green-fg">except</span> SympifyError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     98</span>                 <span class="ansi-green-fg">return</span> retval
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/numbers.py</span> in <span class="ansi-cyan-fg">__mul__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1755</span>                 <span class="ansi-green-fg">return</span> other<span class="ansi-blue-fg">*</span>self
+<span class="ansi-green-intense-fg ansi-bold">   1756</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1757</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> Number<span class="ansi-blue-fg">.</span>__mul__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1758</span>         <span class="ansi-green-fg">return</span> Number<span class="ansi-blue-fg">.</span>__mul__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1759</span>     __rmul__ <span class="ansi-blue-fg">=</span> __mul__
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/decorators.py</span> in <span class="ansi-cyan-fg">__sympifyit_wrapper</span><span class="ansi-blue-fg">(a, b)</span>
+<span class="ansi-green-intense-fg ansi-bold">     94</span>                 <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> hasattr<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;_op_priority&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     95</span>                     b <span class="ansi-blue-fg">=</span> sympify<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">,</span> strict<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 96</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>             <span class="ansi-green-fg">except</span> SympifyError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     98</span>                 <span class="ansi-green-fg">return</span> retval
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/numbers.py</span> in <span class="ansi-cyan-fg">__mul__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    767</span>         <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> Tuple<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    768</span>             <span class="ansi-green-fg">return</span> NotImplemented
+<span class="ansi-green-fg">--&gt; 769</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> AtomicExpr<span class="ansi-blue-fg">.</span>__mul__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    770</span> 
+<span class="ansi-green-intense-fg ansi-bold">    771</span>     <span class="ansi-blue-fg">@</span>_sympifyit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;other&#39;</span><span class="ansi-blue-fg">,</span> NotImplemented<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/decorators.py</span> in <span class="ansi-cyan-fg">_func</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    265</span>             <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> expectedcls<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    266</span>                 <span class="ansi-green-fg">return</span> retval
+<span class="ansi-green-fg">--&gt; 267</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    268</span> 
+<span class="ansi-green-intense-fg ansi-bold">    269</span>         <span class="ansi-green-fg">return</span> _func
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/decorators.py</span> in <span class="ansi-cyan-fg">binary_op_wrapper</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    134</span>                     f <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> method_name<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                     <span class="ansi-green-fg">if</span> f <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 136</span><span class="ansi-red-fg">                         </span><span class="ansi-green-fg">return</span> f<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    137</span>             <span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    138</span>         <span class="ansi-green-fg">return</span> binary_op_wrapper
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matexpr.py</span> in <span class="ansi-cyan-fg">__sympifyit_wrapper</span><span class="ansi-blue-fg">(a, b)</span>
+<span class="ansi-green-intense-fg ansi-bold">     26</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     27</span>                 b <span class="ansi-blue-fg">=</span> _sympify<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 28</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span>             <span class="ansi-green-fg">except</span> SympifyError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     30</span>                 <span class="ansi-green-fg">return</span> retval
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/core/decorators.py</span> in <span class="ansi-cyan-fg">binary_op_wrapper</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                     <span class="ansi-green-fg">if</span> f <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    136</span>                         <span class="ansi-green-fg">return</span> f<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 137</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    138</span>         <span class="ansi-green-fg">return</span> binary_op_wrapper
+<span class="ansi-green-intense-fg ansi-bold">    139</span>     <span class="ansi-green-fg">return</span> priority_decorator
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matexpr.py</span> in <span class="ansi-cyan-fg">__rmul__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    133</span>     <span class="ansi-blue-fg">@</span>call_highest_priority<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;__mul__&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    134</span>     <span class="ansi-green-fg">def</span> __rmul__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 135</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> MatMul<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>doit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    136</span> 
+<span class="ansi-green-intense-fg ansi-bold">    137</span>     <span class="ansi-blue-fg">@</span>_sympifyit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;other&#39;</span><span class="ansi-blue-fg">,</span> NotImplemented<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matmul.py</span> in <span class="ansi-cyan-fg">doit</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         deep <span class="ansi-blue-fg">=</span> kwargs<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;deep&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>         <span class="ansi-green-fg">if</span> deep<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 172</span><span class="ansi-red-fg">             </span>args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>arg<span class="ansi-blue-fg">.</span>doit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> arg <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    173</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    174</span>             args <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>args
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matmul.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         deep <span class="ansi-blue-fg">=</span> kwargs<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;deep&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>         <span class="ansi-green-fg">if</span> deep<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 172</span><span class="ansi-red-fg">             </span>args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>arg<span class="ansi-blue-fg">.</span>doit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> arg <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    173</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    174</span>             args <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>args
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matadd.py</span> in <span class="ansi-cyan-fg">doit</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     81</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     82</span>             args <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>args
+<span class="ansi-green-fg">---&gt; 83</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> canonicalize<span class="ansi-blue-fg">(</span>MatAdd<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     84</span> 
+<span class="ansi-green-intense-fg ansi-bold">     85</span>     <span class="ansi-green-fg">def</span> _eval_derivative_matrix_lines<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/core.py</span> in <span class="ansi-cyan-fg">exhaustive_rl</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span>     <span class="ansi-blue-fg">&#34;&#34;&#34; Apply a rule repeatedly until it has no effect &#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">def</span> exhaustive_rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 11</span><span class="ansi-red-fg">         </span>new<span class="ansi-blue-fg">,</span> old <span class="ansi-blue-fg">=</span> rule<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> expr
+<span class="ansi-green-intense-fg ansi-bold">     12</span>         <span class="ansi-green-fg">while</span> new <span class="ansi-blue-fg">!=</span> old<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span>             new<span class="ansi-blue-fg">,</span> old <span class="ansi-blue-fg">=</span> rule<span class="ansi-blue-fg">(</span>new<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> new
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/core.py</span> in <span class="ansi-cyan-fg">conditioned_rl</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">     31</span>     <span class="ansi-green-fg">def</span> conditioned_rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     32</span>         <span class="ansi-green-fg">if</span> cond<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 33</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> rule<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     35</span>             <span class="ansi-green-fg">return</span> expr
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/core.py</span> in <span class="ansi-cyan-fg">do_one_rl</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span>     <span class="ansi-green-fg">def</span> do_one_rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     84</span>         <span class="ansi-green-fg">for</span> rl <span class="ansi-green-fg">in</span> rules<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 85</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> rl<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     86</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-blue-fg">!=</span> expr<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     87</span>                 <span class="ansi-green-fg">return</span> result
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/strategies/rl.py</span> in <span class="ansi-cyan-fg">conglomerate</span><span class="ansi-blue-fg">(expr)</span>
+<span class="ansi-green-intense-fg ansi-bold">     65</span>     <span class="ansi-green-fg">def</span> conglomerate<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     66</span>         <span class="ansi-blue-fg">&#34;&#34;&#34; Conglomerate together identical args x + x -&gt; 2x &#34;&#34;&#34;</span>
+<span class="ansi-green-fg">---&gt; 67</span><span class="ansi-red-fg">         </span>groups <span class="ansi-blue-fg">=</span> sift<span class="ansi-blue-fg">(</span>expr<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">,</span> key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     68</span>         counts <span class="ansi-blue-fg">=</span> dict<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>k<span class="ansi-blue-fg">,</span> sum<span class="ansi-blue-fg">(</span>map<span class="ansi-blue-fg">(</span>count<span class="ansi-blue-fg">,</span> args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> args <span class="ansi-green-fg">in</span> groups<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     69</span>         newargs <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>combine<span class="ansi-blue-fg">(</span>cnt<span class="ansi-blue-fg">,</span> mat<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> mat<span class="ansi-blue-fg">,</span> cnt <span class="ansi-green-fg">in</span> counts<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/utilities/iterables.py</span> in <span class="ansi-cyan-fg">sift</span><span class="ansi-blue-fg">(seq, keyfunc, binary)</span>
+<span class="ansi-green-intense-fg ansi-bold">    809</span>         m <span class="ansi-blue-fg">=</span> defaultdict<span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    810</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> seq<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 811</span><span class="ansi-red-fg">             </span>m<span class="ansi-blue-fg">[</span>keyfunc<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    812</span>         <span class="ansi-green-fg">return</span> m
+<span class="ansi-green-intense-fg ansi-bold">    813</span>     sift <span class="ansi-blue-fg">=</span> F<span class="ansi-blue-fg">,</span> T <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.8/site-packages/sympy/matrices/expressions/matadd.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(arg)</span>
+<span class="ansi-green-intense-fg ansi-bold">     99</span> 
+<span class="ansi-green-intense-fg ansi-bold">    100</span> factor_of <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> arg<span class="ansi-blue-fg">:</span> arg<span class="ansi-blue-fg">.</span>as_coeff_mmul<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">--&gt; 101</span><span class="ansi-red-fg"> </span>matrix_of <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> arg<span class="ansi-blue-fg">:</span> unpack<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">.</span>as_coeff_mmul<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    102</span> <span class="ansi-green-fg">def</span> combine<span class="ansi-blue-fg">(</span>cnt<span class="ansi-blue-fg">,</span> mat<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    103</span>     <span class="ansi-green-fg">if</span> cnt <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;Dummy&#39; object has no attribute &#39;as_coeff_mmul&#39;</pre>
+</div>
 </div>
 
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle l = 0.15\ \text{m}$
 </div>
 
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A redukált tömeg kiszámításához szükség van a tehetetlenségi nyomatékra, amely az $A$ pontra számolva:</p>
-$$\theta_{\textrm{A}} = \theta_{\textrm{S}} + \theta_{\textrm{AS}} = \dfrac{1}{12} m_2 (3a)^2 + m_2 \left(\dfrac{3}{2} a - a\right).$$
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">θ_A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="n">m_2</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m_2</span><span class="o">*</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">theta_A = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">θ_A</span><span class="p">))))</span> <span class="c1"># \theta_A nem elég, kettő \\ kell, mivel &#39;\t&#39;-t a Python külön értelmezi</span>
-                                                      <span class="c1"># + egyből egyszerűsíti a fent látható kifejezést</span>
-    
-<span class="n">θ_A_num</span> <span class="o">=</span> <span class="n">θ_A</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">theta_A = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{kgm$^2$}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">θ_A_num</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Most tehát minden szimbolikus vektort/mátrixot a benne lévő elemek</span>
+<span class="c1"># szimbolikussá tételével fogunk kezelni</span>
 
-<span class="n">θ_A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;θ_A&quot;</span><span class="p">)</span>
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">θ_A</span><span class="p">,</span><span class="n">θ_A_num</span><span class="p">))</span>
+<span class="n">v_Sx</span><span class="p">,</span> <span class="n">v_Sy</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;v_{\mathrm</span><span class="si">{S}</span><span class="s1">x}, v_{\mathrm</span><span class="si">{S}</span><span class="s1">y}&#39;</span><span class="p">)</span>
+<span class="n">v_Ox</span><span class="p">,</span> <span class="n">v_Oy</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;v_{\mathrm</span><span class="si">{O}</span><span class="s1">x}, v_{\mathrm</span><span class="si">{O}</span><span class="s1">y}&#39;</span><span class="p">)</span>
+<span class="n">v_Bx</span><span class="p">,</span> <span class="n">v_By</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;v_{\mathrm</span><span class="si">{B}</span><span class="s1">x}, v_{\mathrm</span><span class="si">{B}</span><span class="s1">y}&#39;</span><span class="p">)</span>
+<span class="n">r_OSx</span><span class="p">,</span> <span class="n">r_OSy</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;r_{\mathrm</span><span class="si">{OS}</span><span class="s1">x}, r_{\mathrm</span><span class="si">{OS}</span><span class="s1">y}&#39;</span><span class="p">)</span>
+<span class="n">r_BSx</span><span class="p">,</span> <span class="n">r_BSy</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;r_{\mathrm</span><span class="si">{BS}</span><span class="s1">x}, r_{\mathrm</span><span class="si">{BS}</span><span class="s1">y}&#39;</span><span class="p">)</span>
+<span class="n">ω_1z</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;ω_1z&#39;</span><span class="p">)</span>
+
+<span class="n">v_S</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">v_Sx</span><span class="p">],[</span><span class="n">v_Sy</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">v_O</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">v_Ox</span><span class="p">],[</span><span class="n">v_Oy</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">v_B</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">v_Bx</span><span class="p">],[</span><span class="n">v_By</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">r_OS</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">r_OSx</span><span class="p">],[</span><span class="n">r_OSy</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">r_BS</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">r_BSx</span><span class="p">],[</span><span class="n">r_BSy</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
 </pre></div>
 
      </div>
@@ -14508,48 +14736,14 @@ $$\theta_{\textrm{A}} = \theta_{\textrm{S}} + \theta_{\textrm{AS}} = \dfrac{1}{1
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle \theta_A = a^{2} m_{2}$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle \theta_A = 0.54\ \text{kgm$^2$}$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Így a redukált tömeg számítható:</p>
-$$m_{\textrm{T}} = \dfrac{\theta_{\textrm{A}}}{l^2}.$$
+<p>2 sebességredukciós képlet segítségével számíthatjuk ki a megfelelő sebességeket a kinetikus energia kifejezésében, valamint ezek felhasználásával határozhatjuk meg a kapcsolatot az általános koordináták és ezen sebességek között. Az ábra alapján:</p>
+$$\mathbf{v}_\mathrm{S} = \mathbf{v}_\mathrm{O} + \begin{bmatrix}0 \\ 0 \\ \dot\varphi\end{bmatrix} \times \mathbf{r}_\mathrm{OS},$$<p>valamint 
+$$\mathbf{v}_\mathrm{S} = \mathbf{v}_\mathrm{B} + \begin{bmatrix}0 \\ 0 \\ \omega_{1z}\end{bmatrix} \times \mathbf{r}_\mathrm{BS}.$$</p>
+<p>Megállapítható továbbá, hogy</p>
+$$\mathbf{v}_\mathrm{O} = \mathbf{v}_\mathrm{B} = \begin{bmatrix}0 \\ \dot{y} \\ 0\end{bmatrix}.$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14557,14 +14751,61 @@ $$m_{\textrm{T}} = \dfrac{\theta_{\textrm{A}}}{l^2}.$$
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m_T</span> <span class="o">=</span> <span class="n">θ_A</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;m_T = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">m_T</span><span class="p">))))</span> 
-    
-<span class="n">m_T_num</span> <span class="o">=</span> <span class="n">m_T</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;m_T = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{kg}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m_T_num</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_OS_red</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)],[</span><span class="mi">0</span><span class="p">]])</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)]])</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">r_OS</span><span class="p">)</span>
 
-<span class="n">m_T</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;m_T&quot;</span><span class="p">)</span> 
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">m_T</span><span class="p">,</span><span class="n">m_T_num</span><span class="p">))</span>
+<span class="n">v_BS_red</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)],[</span><span class="mi">0</span><span class="p">]])</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="n">ω_1z</span><span class="p">]])</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">r_BS</span><span class="p">)</span>
+
+<span class="c1"># A helyvektorok koordinátái az ábráról leolvashatóak:</span>
+<span class="n">vekt_koord</span> <span class="o">=</span> <span class="p">[(</span><span class="n">r_OSx</span><span class="p">,</span> <span class="p">(</span><span class="n">R</span><span class="o">-</span><span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="p">(</span><span class="n">r_OSy</span><span class="p">,</span>  <span class="o">-</span><span class="p">(</span><span class="n">R</span><span class="o">-</span><span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span>
+              <span class="p">(</span><span class="n">r_BSx</span><span class="p">,</span> <span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="p">(</span><span class="n">r_BSy</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]))]</span>
+
+<span class="c1"># A fentiek alapján az alábbi egyenlőség áll fenn:</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">v_OS_red</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">vekt_koord</span><span class="p">),</span><span class="n">v_BS_red</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">vekt_koord</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}- \left(- R + r\right) \cos{\left(φ{\left(t \right)} \right)} \frac{d}{d t} φ{\left(t \right)}\\\left(R - r\right) \sin{\left(φ{\left(t \right)} \right)} \frac{d}{d t} φ{\left(t \right)} + \frac{d}{d t} y{\left(t \right)}\\0\end{matrix}\right] = \left[\begin{matrix}- r ω_{1z} \cos{\left(φ{\left(t \right)} \right)}\\- r ω_{1z} \sin{\left(φ{\left(t \right)} \right)} + \frac{d}{d t} y{\left(t \right)}\\0\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fejezzük ki `ω_1z` és `φ.diff(t)` közötti kapcsolatot, felhasználva</span>
+<span class="c1"># (pl.) az x komponensek egyenlőségét:</span>
+
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">v_OS_red</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">vekt_koord</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="n">v_BS_red</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">vekt_koord</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+
+<span class="n">ω_1z_expr</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">ω_1z</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{1z}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_1z_expr</span><span class="p">))))</span>
 </pre></div>
 
      </div>
@@ -14586,7 +14827,7 @@ $$m_{\textrm{T}} = \dfrac{\theta_{\textrm{A}}}{l^2}.$$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle m_T = \frac{θ_{A}}{l^{2}}$
+$\displaystyle - \left(- R + r\right) \cos{\left(φ{\left(t \right)} \right)} \frac{d}{d t} φ{\left(t \right)} = - r ω_{1z} \cos{\left(φ{\left(t \right)} \right)}$
 </div>
 
 </div>
@@ -14600,7 +14841,7 @@ $\displaystyle m_T = \frac{θ_{A}}{l^{2}}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle m_T = 24\ \text{kg}$
+$\displaystyle ω_{1z} = \frac{\left(- R + r\right) \frac{d}{d t} φ{\left(t \right)}}{r}$
 </div>
 
 </div>
@@ -14609,58 +14850,23 @@ $\displaystyle m_T = 24\ \text{kg}$
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A golyó mozgásállapota az ütközés előtt: $[\mathbf{\Omega}_1; \mathbf{c}_1] = [\mathbf{0};-1,5\mathbf{j}\ $[m/s]$ ]$, ahol $\mathbf{j}$ jelöli az y irányú egységvektort.</p>
-<p>A rúd mozgásállapota az ütközés előtt: $[\mathbf{\Omega}_2; \mathbf{c}_{\textrm{Tn}}] = [\mathbf{0};\mathbf{0}]$, mivel a rúd az ütközés pillanata előtt nyugalomban van.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center><img src="gyak1_3.png" width=150/></center>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_Tn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_Tn&quot;</span><span class="p">)</span> <span class="c1"># a rúd az ütközés előtt nyugalomban van, ezért c_Tn = 0</span>
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_Tn</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A $\mathbf{c}_1$ sebesség vektor $\textbf{n}$ ütközési normális irányú, és az arra merőleges tangenciális irányú komponense a következőképpen számolható az ábra alapján:</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$c_{1\textrm{n}} = c_1\ \textrm{cos}(\beta),$$$$c_{1\textrm{t}} = c_1\ \textrm{sin}(\beta).$$
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_1n</span> <span class="o">=</span> <span class="n">c_1</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">β</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1n}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_1n</span><span class="p">))))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ezt felhasználva a B és S pontok közötti sebességred. képletből:</span>
+<span class="n">v_S_expr</span> <span class="o">=</span> <span class="n">v_BS_red</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">vekt_koord</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">ω_1z</span><span class="p">,</span><span class="n">ω_1z_expr</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;\mathbf{{v}}_\mathrm{{S}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_S_expr</span><span class="p">))))</span>
 
-<span class="n">c_1n_num</span> <span class="o">=</span> <span class="n">c_1n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1n}} = </span><span class="si">{}</span><span class="s1"> \ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1n_num</span><span class="p">)))</span>
+<span class="c1"># Mostmár felírható a kinetikus energia az általánosított</span>
+<span class="c1"># koordináták segítségével</span>
 
-<span class="n">c_1n</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_1n&quot;</span><span class="p">)</span> 
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_1n</span><span class="p">,</span><span class="n">c_1n_num</span><span class="p">))</span>
+<span class="n">Θ_1Sz</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">m1</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">T</span> <span class="o">=</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">m2</span> <span class="o">*</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> 
+     <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">m1</span> <span class="o">*</span> <span class="n">v_S_expr</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v_S_expr</span><span class="p">)</span>
+     <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">Θ_1Sz</span> <span class="o">*</span> <span class="n">ω_1z_expr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14682,21 +14888,7 @@ $$c_{1\textrm{n}} = c_1\ \textrm{cos}(\beta),$$$$c_{1\textrm{t}} = c_1\ \textrm{
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{1n} = c_{1} \cos{\left(β \right)}$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{1n} = 0.75 \ \text{m/s}$
+$\displaystyle \mathbf{v}_\mathrm{S} = \left[\begin{matrix}- \left(- R + r\right) \cos{\left(φ{\left(t \right)} \right)} \frac{d}{d t} φ{\left(t \right)}\\- \left(- R + r\right) \sin{\left(φ{\left(t \right)} \right)} \frac{d}{d t} φ{\left(t \right)} + \frac{d}{d t} y{\left(t \right)}\\0\end{matrix}\right]$
 </div>
 
 </div>
@@ -14705,20 +14897,35 @@ $\displaystyle c_{1n} = 0.75 \ \text{m/s}$
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_1t</span> <span class="o">=</span> <span class="n">c_1</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">β</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1t}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_1t</span><span class="p">))))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## A potenciális energia</span>
 
-<span class="n">c_1t_num</span> <span class="o">=</span> <span class="n">c_1t</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1t}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1t_num</span><span class="p">)))</span>
+<span class="sd">&quot;&quot;&quot;A potenciális energia a rugókban felhalmozódó potenciális energia</span>
+<span class="sd">és a gravitációs erő potenciális energiájából tevődik össze.</span>
+<span class="sd">Mivel a rugó előterhelt állapotban van az egyensúlyi pozícióban, ezért</span>
+<span class="sd">célszerű a potenciális energiának bevezetni egy új koordináta rendszert,</span>
+<span class="sd">aminek a függőleges nullpontja ott van, ahol a rugó hossza megegyegyzik</span>
+<span class="sd">a terheletlen hosszával. Ezzel a transzformációval </span>
+<span class="sd">az új koordináta-rendszerben a nullszinttől való eltérést a z koordináta méri.&quot;&quot;&quot;</span>
 
-<span class="n">c_1t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_1t&quot;</span><span class="p">)</span> 
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_1t</span><span class="p">,</span><span class="n">c_1t_num</span><span class="p">))</span>
+<span class="n">z_st</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;z_st&quot;</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">z_st</span>
+
+<span class="n">ke</span> <span class="o">=</span> <span class="n">k1</span> <span class="o">+</span> <span class="n">k2</span> <span class="o">+</span> <span class="n">k3</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">ke</span><span class="o">*</span><span class="n">z</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m1</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="o">+</span><span class="n">r_OSy</span><span class="p">)</span> <span class="o">+</span> <span class="n">m2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">z</span>
+
+<span class="c1"># Fejezzük ki a statikus deformációt az egyensúlyi egyenletből:</span>
+
+<span class="n">e_egy</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">((</span><span class="n">m1</span> <span class="o">+</span> <span class="n">m2</span><span class="p">)</span><span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">ke</span><span class="o">*</span><span class="n">z_st</span><span class="p">)</span> <span class="c1"># azaz egyensúlyban `(m1 + m2)*g = ke*z_st`</span>
+<span class="n">z_st_expr</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">e_egy</span><span class="p">,</span><span class="n">z_st</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Írjuk vissza U-ba:</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">z_st</span><span class="p">,</span><span class="n">z_st_expr</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">vekt_koord</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14726,64 +14933,18 @@ $\displaystyle c_{1n} = 0.75 \ \text{m/s}$
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{1t} = c_{1} \sin{\left(β \right)}$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{1t} = 1.3\ \text{m/s}$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Ezzel a feladat az $m_1$ és $m_{\textrm{T}}$ tömegű testek centrikus ütközéseként modellezhető, melyeknek ütközés előtti sebességeinek normális komponensei $c_{1\textrm{n}}$ és $c_{\textrm{Tn}}$. Ez a probléma Maxwell diagram alkalmazásával grafikusan is megoldható.</p>
-<p>Ehhez először kiszámítjuk a közös súlypont sebességét, ami az ütközés során változatlan marad.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_Sn</span> <span class="o">=</span> <span class="p">(</span><span class="n">m_1</span><span class="o">*</span><span class="n">c_1n</span> <span class="o">+</span> <span class="n">m_T</span><span class="o">*</span><span class="n">c_Tn</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">m_1</span> <span class="o">+</span> <span class="n">m_T</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{Sn}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_Sn</span><span class="p">))))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Minden adott a Lagrange-egyenletben; írjuk fel a mozgásegyenleteket</span>
 
-<span class="n">c_Sn_num</span> <span class="o">=</span> <span class="n">c_Sn</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{Sn}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_Sn_num</span><span class="p">))))</span>
-
-<span class="n">c_Sn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_Sn&quot;</span><span class="p">)</span> 
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_Sn</span><span class="p">,</span><span class="n">c_Sn_num</span><span class="p">))</span>
+<span class="n">eom_y</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">T</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">U</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># `y`-hoz tartozó</span>
+<span class="n">eom_φ</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">T</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">U</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># `φ`-hez tartozó</span>
+<span class="n">eom_φ</span> <span class="o">=</span> <span class="n">eom_φ</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+<span class="n">eom_y</span> <span class="o">=</span> <span class="n">eom_y</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14791,78 +14952,13 @@ $\displaystyle c_{1t} = 1.3\ \text{m/s}$
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{Sn} = \frac{c_{1n} m_{1} + c_{Tn} m_{T}}{m_{1} + m_{T}}$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{Sn} = 0.15\ \text{m/s}$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center><img src="gyak1_4.png" width=800/></center>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A Maxwell diagram megszerkesztésének folyamatát mutatja a fenti ábra. Először (a) az $\textrm{O}_1$ és $\textrm{O}_{\textrm{T}}$ pontokban párhuzamos egyeneseket húzunk az ütközési normálissal, valamint berajzoljuk a testek normális irányú, ütközés előtti sebességeit. Mivel a rúd az ütközés előtt nyugalomban volt, így annak ütközés előtti sebessége zérus. Ezt követően összekötjük a sebességvektorok végpontjait, majd megállapítjuk a közös súlypont helyét a golyó tömegének és a rúd redukált tömegének segítségével az $\frac{\overline{\textrm{SM}_{\textrm{T}}}}{\overline{\textrm{SM}_{\textrm{1}}}} = \frac{m_1}{m_{\textrm{T}}}$ arány felhasználásával. A közös súlypontnak a normális irányú egyenesekre eső merőleges vetületei alapján megállapíthatjuk a $\Delta_1$ és $\Delta_{\textrm{T}}$ 'távolságokat' (b), amik ahhoz a sebességváltozáshoz tartoznak, amikor az ütközésben részt vevő testek elérik a közös súlypont sebességét. Az $e$ ütközési tényező felhasználásával megállapíthatjuk az ütközés utáni ütközési normális irányú sebességeket, mégpedig $e\Delta_1$ és $e\Delta_{\textrm{T}}$-t mérve a $\textrm{P}_1\textrm{P}_{\textrm{T}}$ egyenes túloldalára (c). A golyó ütközés utáni normális irányú sebességét az $\overline{\textrm{O}_1\textrm{Q}_1}$, a rúdét az $\overline{\textrm{O}_{\textrm{T}}\textrm{Q}_{\textrm{T}}}$ adja.</p>
-<p>Ezek alapján az ütközés utáni normális irányú sebességkomponensek</p>
-$$v_{1\textrm{n}} = c_{\textrm{Sn}} - e\Delta_1 = c_{\textrm{Sn}} - e(c_{\textrm{1n}} - c_{\textrm{Sn}}),$$$$v_{\textrm{Tn}} = c_{\textrm{Sn}} - e\Delta_{\textrm{T}} = (1+e)c_{\textrm{Sn}}, $$
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_1n</span> <span class="o">=</span> <span class="n">c_Sn</span> <span class="o">-</span> <span class="n">e</span><span class="o">*</span><span class="p">(</span><span class="n">c_1n</span> <span class="o">-</span> <span class="n">c_Sn</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{1n}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_1n</span><span class="p">))))</span>
-
-<span class="n">v_1n_num</span> <span class="o">=</span> <span class="n">v_1n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{1n}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_1n_num</span><span class="p">))))</span>
-
-<span class="n">v_1n</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;v_1n&quot;</span><span class="p">)</span> 
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v_1n</span><span class="p">,</span><span class="n">v_1n_num</span><span class="p">))</span>
-
-<span class="n">v_Tn</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span><span class="o">*</span><span class="n">c_Sn</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{Tn}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_Tn</span><span class="p">))))</span>
-
-<span class="n">v_Tn_num</span> <span class="o">=</span> <span class="n">v_Tn</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{Tn}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_Tn_num</span><span class="p">))))</span>
-
-<span class="n">v_Tn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;v_Tn&quot;</span><span class="p">)</span> 
-<span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v_Tn</span><span class="p">,</span><span class="n">v_Tn_num</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">eom_y</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">eom_φ</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14884,7 +14980,7 @@ $$v_{1\textrm{n}} = c_{\textrm{Sn}} - e\Delta_1 = c_{\textrm{Sn}} - e(c_{\textrm
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle v_{1n} = c_{Sn} - e \left(c_{1n} - c_{Sn}\right)$
+$\displaystyle g m_{1} + g m_{2} - g \left(m_{1} + m_{2}\right) + m_{1} \left(\left(R - r\right) \sin{\left(φ{\left(t \right)} \right)} \frac{d^{2}}{d t^{2}} φ{\left(t \right)} + \left(R - r\right) \cos{\left(φ{\left(t \right)} \right)} \left(\frac{d}{d t} φ{\left(t \right)}\right)^{2} + \frac{d^{2}}{d t^{2}} y{\left(t \right)}\right) + m_{2} \frac{d^{2}}{d t^{2}} y{\left(t \right)} + \left(k_{1} + k_{2} + k_{3}\right) y{\left(t \right)} = 0$
 </div>
 
 </div>
@@ -14898,35 +14994,7 @@ $\displaystyle v_{1n} = c_{Sn} - e \left(c_{1n} - c_{Sn}\right)$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle v_{1n} = -0.45\ \text{m/s}$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle v_{Tn} = c_{Sn} \left(e + 1\right)$
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle v_{Tn} = 0.3\ \text{m/s}$
+$\displaystyle \frac{m_{1} \left(R - r\right) \left(3 R \frac{d^{2}}{d t^{2}} φ{\left(t \right)} + 2 g \sin{\left(φ{\left(t \right)} \right)} - 3 r \frac{d^{2}}{d t^{2}} φ{\left(t \right)} + 2 \sin{\left(φ{\left(t \right)} \right)} \frac{d^{2}}{d t^{2}} y{\left(t \right)}\right)}{2} = 0$
 </div>
 
 </div>
@@ -14935,30 +15003,128 @@ $\displaystyle v_{Tn} = 0.3\ \text{m/s}$
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Így, a golyó ütközés utáni normális irányú sebessége</p>
-$$v_{1\textrm{n}} = -0,45\ \frac{\textrm{m}}{\textrm{s}},$$<p>a tangenciális irányú sebessége változatlan, ugyanis az ütközés súrlódásmentes, azaz</p>
-$$v_{1\textrm{t}} = c_{1\textrm{t}} = 1,3\ \frac{\textrm{m}}{\textrm{s}}.$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A rúd az A pont körül végez forgómozgást, ezért T pontjának sebességének segítségével az ütközés utáni szögsebessége számítható:</p>
-$$\omega_2 = \frac{v_{\textrm{Tn}}}{l}.$$
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ω_2</span> <span class="o">=</span> <span class="n">v_Tn</span> <span class="o">/</span> <span class="n">l</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{2}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_2</span><span class="p">))))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;A linearizáláshoz írjuk fel az egyensúlyi helyzet körüli Taylor sorfejtéshez</span>
+<span class="sd">tartózó Taylor polinomot az elsőfokú tagig. Ehhez a `sympy` `sp.series` metódusa</span>
+<span class="sd">használható. Demonstráció: linearizáljuk a `sin(a(t))` függvényt `a(t) = 0` körül.&quot;&quot;&quot;</span> 
 
-<span class="n">ω_2_num</span> <span class="o">=</span> <span class="n">ω_2</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{2}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{rad/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_2_num</span><span class="p">))))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">a_sym</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a_sym&#39;</span><span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; Jelen helyzetben `a` `t`-nek a függvénye, így a `sympy` nem szimbólumként kezeli.</span>
+<span class="sd">Létre kell hozni egy átmeneti szimbólumot, amire kicseréljük a függvényünket. Ez csak</span>
+<span class="sd">formaiság. A `sp.series` az argumentumába először egy függvényt vár (itt történik az említett csere),</span>
+<span class="sd">majd várja a függvény argumentumát. Ezt követően meg kell adni, hogy mely pont körül fejtünk </span>
+<span class="sd">sorba (itt a_sym = 0), valamint hogy hanyadrendig szeretnénk megtenni a sorfejtést.&quot;&quot;&quot;</span>
+
+<span class="n">a_lin_sym</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">a_sym</span><span class="p">),</span><span class="n">a_sym</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Alternatív függvény hívás:</span>
+<span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">a_sym</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">a_sym</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># azaz közvetlenül a `sympy` objektumra</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle a_{sym} + O\left(a_{sym}^{2}\right)$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;A magasabb rendű tagokat a `.removeO()` metódussal hagyhatjuk el (figyelem, nem .remove0()!),</span>
+<span class="sd">majd cseréljük vissza a szimbólumot a függvényünkre:&quot;&quot;&quot;</span>
+
+<span class="n">a_lin</span> <span class="o">=</span> <span class="n">a_lin_sym</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">a_sym</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a_lin</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle a{\left(t \right)}$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;Linearizáljuk a mozgásegyenletetek bal oldalát (mint függvényeket), a </span>
+<span class="sd">q(t) = 0, és q.diff(t) = 0 egyensúlyi helyzet körül. Arra kell itt figyelni, hogy az ált. koordináták</span>
+<span class="sd">deriváltjait külön változóként kell kezelni.&quot;&quot;&quot;</span> 
+
+<span class="c1"># Cseréljük ki a deriváltakat szimbólumokra. Fontos, hogy a legmagasabb rendű deriválttal</span>
+<span class="c1"># kezdjünk, mert ha pl. az első deriválttal kezdünk, a második deriváltat is kicseréli annak a deriváltjára.</span>
+<span class="n">φ</span><span class="p">,</span> <span class="n">dφ</span><span class="p">,</span> <span class="n">ddφ</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;φ, dφ, ddφ&#39;</span><span class="p">)</span>
+<span class="n">φ_csere</span> <span class="o">=</span> <span class="p">[(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">ddφ</span><span class="p">),(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="n">dφ</span><span class="p">),(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">φ</span><span class="p">)]</span>
+<span class="n">φ_csere_vissza</span> <span class="o">=</span> <span class="p">[(</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">φ_csere</span><span class="p">]</span> <span class="c1"># hasznos lesz, ha a vissza kell cserélni</span>
+
+<span class="n">eom1_csere</span> <span class="o">=</span> <span class="n">eom_y</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">φ_csere</span><span class="p">)</span>
+
+<span class="n">eom1_taylor</span> <span class="o">=</span> <span class="n">eom1_csere</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">dφ</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span> <span class="c1"># egymás után többször is meg lehet hívni</span>
+<span class="n">eom1_taylor</span> <span class="o">=</span> <span class="n">eom1_taylor</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">φ_csere_vissza</span><span class="p">)</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span> <span class="c1"># visszacsere</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">eom1_taylor</span><span class="p">)</span>
+<span class="c1"># Van még egy másodrendben kicsi tagunk, amit kézzel kell nullázni. Ejtsük ki azt a tagot úgy, hogy</span>
+<span class="c1"># pl. φ helyére 0-t helyettesítünk. (Ha lenne máshol is φ ez nem lenne jó döntés.)</span>
+
+<span class="n">eom1_lin</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">eom1_taylor</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="mi">0</span><span class="p">)</span> 
+<span class="n">eom1_lin</span> <span class="c1"># megküzdöttünk vele (:</span>
 </pre></div>
 
      </div>
@@ -14980,7 +15146,142 @@ $$\omega_2 = \frac{v_{\textrm{Tn}}}{l}.$$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle ω_{2} = \frac{v_{Tn}}{l}$
+$\displaystyle g m_{1} + g m_{2} - g \left(m_{1} + m_{2}\right) + m_{1} \left(R - r\right) φ{\left(t \right)} \frac{d^{2}}{d t^{2}} φ{\left(t \right)} + m_{1} \frac{d^{2}}{d t^{2}} y{\left(t \right)} + m_{2} \frac{d^{2}}{d t^{2}} y{\left(t \right)} + \left(k_{1} + k_{2} + k_{3}\right) y{\left(t \right)}$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left(m_{1} + m_{2}\right) \frac{d^{2}}{d t^{2}} y{\left(t \right)} + \left(k_{1} + k_{2} + k_{3}\right) y{\left(t \right)} = 0$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Végezzünk hasonlót a másik mozgásegyenletünk esetében:</span>
+
+<span class="n">eom2_taylor</span> <span class="o">=</span> <span class="n">eom_φ</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">φ_csere</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">φ_csere_vissza</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">eom2_taylor</span><span class="p">)</span>
+
+<span class="c1"># Másodrendben kicsi tagunk itt akkor lesz, ha `φ`-t szorozzunk y&#39;&#39;-tal.</span>
+<span class="c1"># Kézzel ezeket a tagokat jelen esetben pl. úgy tudjuk eltüntetni, hogy</span>
+<span class="c1"># y&#39;&#39; helyére 0-t helyettesítünk:</span>
+<span class="n">eom2_lin</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">eom2_taylor</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">eom2_lin</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \frac{3 R^{2} m_{1} \frac{d^{2}}{d t^{2}} φ{\left(t \right)}}{2} - 3 R m_{1} r \frac{d^{2}}{d t^{2}} φ{\left(t \right)} + \frac{3 m_{1} r^{2} \frac{d^{2}}{d t^{2}} φ{\left(t \right)}}{2} + \left(R g m_{1} + R m_{1} \frac{d^{2}}{d t^{2}} y{\left(t \right)} - g m_{1} r - m_{1} r \frac{d^{2}}{d t^{2}} y{\left(t \right)}\right) φ{\left(t \right)}$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left(R g m_{1} - g m_{1} r\right) φ{\left(t \right)} + \left(\frac{3 R^{2} m_{1}}{2} - 3 R m_{1} r + \frac{3 m_{1} r^{2}}{2}\right) \frac{d^{2}}{d t^{2}} φ{\left(t \right)} = 0$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.-Feladat">2. Feladat<a class="anchor-link" href="#2.-Feladat">&#182;</a></h3><p>Adjuk meg a mozgásegyenleteket mátrix együtthatós alakban, melynek alakja jelen esetben (disszipatív potenciál, és nem potenciálos aktív erők nélkül):</p>
+$$\mathbf{M}\mathbf{\ddot{q}} + \mathbf{K}\mathbf{q} = \mathbf{0}.$$
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tegyük meg ezt kétféleképpen:</span>
+
+<span class="c1"># Elsőnek parciálisan deriváljuk a kinetikus energiát a 2 ált. sebesség szerint,</span>
+<span class="c1"># majd helyettesítsünk 0-t a helyükre.</span>
+<span class="c1"># Szintax: egymásba ágyazott 2 db `list comprehension`. Olyan mint 2 egymásba</span>
+<span class="c1"># ágyazott `for` ciklus. </span>
+<span class="n">M_array</span> <span class="o">=</span> <span class="p">[[</span><span class="n">T</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q1</span><span class="o">.</span><span class="n">diff</span><span class="p">())</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q2</span><span class="o">.</span><span class="n">diff</span><span class="p">())</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">q1</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">q2</span><span class="p">,</span><span class="mi">0</span><span class="p">)])</span> <span class="k">for</span> <span class="n">q1</span> <span class="ow">in</span> <span class="n">q</span><span class="p">]</span> <span class="k">for</span> <span class="n">q2</span> <span class="ow">in</span> <span class="n">q</span><span class="p">]</span>
+
+<span class="n">K_array</span> <span class="o">=</span> <span class="p">[[</span><span class="n">U</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q1</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q2</span><span class="p">)</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">q1</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">q2</span><span class="p">,</span><span class="mi">0</span><span class="p">)])</span> <span class="k">for</span> <span class="n">q1</span> <span class="ow">in</span> <span class="n">q</span><span class="p">]</span> <span class="k">for</span> <span class="n">q2</span> <span class="ow">in</span> <span class="n">q</span><span class="p">]</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">M_array</span><span class="p">)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">K_array</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;\mathbf{{M}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">M</span><span class="p">))))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;\mathbf{{K}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">K</span><span class="p">))))</span>
+
+<span class="c1"># Ránézve erre a cellára, gondoljuk meg, mennyire egyszerű felírni a mátrix együtthatós</span>
+<span class="c1"># mozgásegyenletet (2 érdemi sor), ha ismert a kinetikus és a potenciális energia függvénye </span>
+<span class="c1"># (+ a disszipatív potenciál, ha releváns), valamint ha nincs nem potenciálos aktív erő (homogén eset). </span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \mathbf{M} = \left[\begin{matrix}m_{1} + m_{2} &amp; 0\\0 &amp; \frac{3 m_{1} \left(- R + r\right)^{2}}{2}\end{matrix}\right]$
 </div>
 
 </div>
@@ -14994,7 +15295,7 @@ $\displaystyle ω_{2} = \frac{v_{Tn}}{l}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle ω_{2} = 2.0\ \text{rad/s}$
+$\displaystyle \mathbf{K} = \left[\begin{matrix}k_{1} + k_{2} + k_{3} &amp; 0\\0 &amp; g m_{1} \left(R - r\right)\end{matrix}\right]$
 </div>
 
 </div>
@@ -15003,24 +15304,130 @@ $\displaystyle ω_{2} = 2.0\ \text{rad/s}$
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Másik módszer, a már linearizált mozgásegyenletekből (amit a Lagrange-egyenletekből kaptunk)</span>
+
+<span class="c1"># fűzzük őket össze egy vektorba:</span>
+<span class="n">eom_12</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">eom1_lin</span><span class="o">.</span><span class="n">lhs</span><span class="p">],[</span><span class="n">eom2_lin</span><span class="o">.</span><span class="n">lhs</span><span class="p">]])</span> <span class="c1"># kell a `left hand side` mert egyenlet alakban vannak</span>
+<span class="n">M2</span> <span class="o">=</span> <span class="n">eom_12</span><span class="o">.</span><span class="n">jacobian</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># Jacobi-mátrix az általános gyorsulások szerint</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="n">eom_12</span><span class="o">.</span><span class="n">jacobian</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;\mathbf{{M}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">M2</span><span class="p">))))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;\mathbf{{K}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">K2</span><span class="p">))))</span>
+</pre></div>
+
+     </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Így a rúd ütközés utáni szögsebessége</p>
-$$\omega_2 = 2\ \frac{\textrm{rad}}{\textrm{s}}.$$
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \mathbf{M} = \left[\begin{matrix}m_{1} + m_{2} &amp; 0\\0 &amp; \frac{3 R^{2} m_{1}}{2} - 3 R m_{1} r + \frac{3 m_{1} r^{2}}{2}\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \mathbf{K} = \left[\begin{matrix}k_{1} + k_{2} + k_{3} &amp; 0\\0 &amp; R g m_{1} - g m_{1} r\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">M</span><span class="o">-</span><span class="n">M2</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">K</span><span class="o">-</span><span class="n">K2</span><span class="p">))</span>  <span class="c1"># Ha nem bíznánk magunkban (:</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}0 &amp; 0\\0 &amp; 0\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}0 &amp; 0\\0 &amp; 0\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Készítette:</p>
 
-<pre><code>        Hertelendy Krisztián és Piri Barnabás (Alkalmazott Mechanika Szakosztály) 
-        Takács Dénes (BME MM) kidolgozása és ábrái alapján.
+<pre><code>   Csuzdi Domonkos (Alkalmazott Mechanika Szakosztály) 
+   Balogh Tamás (BME MM) kidolgozása alapján.
 
-        Hibák, javaslatok:
-        amsz.bme@gmail.com
+    Hibák, javaslatok:
+    amsz.bme@gmail.com
+    csuzdi02@gmail.com
 
-        2021.03.31.</code></pre>
+        2021.04.04</code></pre>
 
 </div>
 </div>
